@@ -1,32 +1,25 @@
-import { useEffect } from "react"; 
+import { useEffect, useState } from "react"; 
 
-import { ajax } from "./tools/ajax";
+import { getCountries } from "./services/countries";
 
 const App = () => {
+  const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    const options = {
-      method: 'GET',
-      url: 'https://restcountries.com/v3.1/all'
-    };
     (async () => {
-      const countries = await ajax(options);
-      console.log(countries);
+      setCountries(await getCountries());
     })();
   }, []);
+
+    // console.log(countries);
+
 
   return (
     <>
       <div>
       <label>Elige un país</label>
         <select name = "">
-           <option value = "">A</option>
-           <option value = "">A</option>
-           <option value = "">A</option>
-           <option value = "">A</option>
-           <option value = "">A</option>
-           <option value = "">A</option>
-
+            {countries.map(country => <option key = {country.cca2} value = "">{country.name.common}</option>)}
         </select>
       </div>
     </>
