@@ -5,11 +5,15 @@ import { ajax } from "./tools/ajax";
 const App = () => {
 
   useEffect(() => {
-    f
-    return () => {
-      cleanup
+    const options = {
+      method: 'GET',
+      url: 'https://restcountries.com/v3.1/all'
     };
-  }, [input]);
+    (async () => {
+      const countries = await ajax(options);
+      console.log(countries);
+    })();
+  }, []);
 
   return (
     <>
