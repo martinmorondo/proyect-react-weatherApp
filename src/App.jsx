@@ -27,10 +27,25 @@ const App = () => {
       e.currentTarget.value && setWeather(await getCityWeather(e.currentTarget.value));
    };
 
-
    return (
       <>
-         
+         <div>
+            <label>Choose a country: </label>
+            <select onChange={countryHandler}>
+               <option value = "">Select</option>
+               {countries.map(country => <option key = {country.cca2} value = {country.cca2}>{country.name.common}</option>)}
+            </select>  
+         </div>
+
+         {cities.length > 0 && (
+            <div>
+               <label>Choose a city: </label>
+               <select onChange={cityHandler}>
+                  <option value = "">Select</option>
+                  {cities.map(city => <option key = {city.id}>{city.name}</option>)}
+               </select>
+            </div>
+         )}
       </>
    );
 }
