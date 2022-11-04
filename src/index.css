@@ -15,6 +15,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -27,11 +33,82 @@ a:hover {
 body {
   margin: 0;
   min-height: 100vh;
+  background: url(/src/assets/original.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: black;
+}
+
+.container {
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container-1 label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.container-1 select {
+  transition: all 1s;
+}
+
+.container-1 select:hover {
+  background-color: black;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container-2 select {
+  transition: all 1s;
+  width: 35%;
+}
+
+.container-2 select:hover {
+  background-color: #213547;
+  color: white;
+}
+
+.container-2 label {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.container-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-3 p {
+  font-weight: bold;
+  letter-spacing: 0.09rem;
+}
+
+.container-3 h2 {
+  font-size: 2rem;
+  margin: 1rem 1rem;
 }
 
 button {
@@ -52,6 +129,46 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+label {
+  color: black;
+  font-weight: bold;
+}
+
+.container-1 select {
+  color: red;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 1rem;
+  width: 30%;
+  padding: 1rem;
+}
+
+.container-2 select {
+  color: red;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 1rem;
+  width: 30%;
+  padding: 1rem;
+}
+
+option {
+  border-radius: 30px;
+  height: 50%;
+  font-weight: bold;
+}
+
+.icon {
+  padding: 0;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border: 6px solid gray;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px black;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

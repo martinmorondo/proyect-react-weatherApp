@@ -28,8 +28,8 @@ const App = () => {
    };
 
    return (
-      <>
-         <div>
+      <div className="container">
+         <div className="container-1">
             <label>Choose a country: </label>
             <select onChange={countryHandler}>
                <option value = "">Select</option>
@@ -38,7 +38,7 @@ const App = () => {
          </div>
 
          {cities.length > 0 && (
-            <div>
+            <div className="container-2">
                <label>Choose a city: </label>
                <select onChange={cityHandler}>
                   <option value = "">Select</option>
@@ -46,7 +46,16 @@ const App = () => {
                </select>
             </div>
          )}
-      </>
+
+         {weather && (
+            <div className="container-3">
+               <h2>Current temperature: {weather.main.temp}°</h2>
+               <p>Min: {weather.main.temp_min.toFixed()}°</p>
+               <p>Max: {weather.main.temp_max.toFixed()}°</p>
+               <img className="icon" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="weather icon" />
+            </div>
+         )}
+      </div>
    );
 }
 
