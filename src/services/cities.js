@@ -1,5 +1,5 @@
 import { ajax } from "../tools/ajax";
-import { apiCity } from "./creds";
+// import { apiCity } from "./creds";
 
 export const getCities = async countryCode => {
     const optionsRequest = {
