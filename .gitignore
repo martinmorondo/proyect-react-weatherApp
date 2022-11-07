@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 .src/services/creds.js
 .env
-.env.jaja
