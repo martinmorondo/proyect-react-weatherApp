@@ -6,7 +6,7 @@ export const getCityWeather = async city => {
         url: `https://api.openweathermap.org/data/2.5/weather`,
         params: {
             q: city,
-            appid: `${apiWeather}`,
+            appid: `${keyWeather}`,
             units: "metric" // Degrees Celsius.
         }
     };
