@@ -5,7 +5,7 @@ export const getCities = async countryCode => {
         method: "GET",
         url:'https://spott.p.rapidapi.com/places/autocomplete',
         headers: {
-            "X-RapidAPI-Key": '95a328d5d0msh7139ed9d43c526bp183634jsnea117057e63b',
+            "X-RapidAPI-Key": '',
             "X-RapidAPI-Host": "spott.p.rapidapi.com"
         },
         params: {
