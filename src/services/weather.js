@@ -6,7 +6,7 @@ export const getCityWeather = async city => {
         url: "https://api.openweathermap.org/data/3.0/onecall",
         params: {
             q: city,
-            appid:  '',
+            appid:  `${keyWeather}`,
             units: "metric" // Degrees Celsius.
         }
     };
