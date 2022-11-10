@@ -46,9 +46,18 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  flex-direction: column;
+  /* flex-direction: column; */
+  /* padding: 1rem; */
+  /* margin: 1rem; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  max-width: 501px;
+  text-align: center;
   padding: 1rem;
-  margin: 1rem;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: black;
+  text-shadow: 0px 0px 8px black;
 }
 
 .container-1 {
@@ -69,7 +78,7 @@ h1, h2, h3, h4 {
 }
 
 .container-1 select:hover {
-  background-color: black;
+  background-color: rgba(255, 255, 150, 0.2);
 }
 
 .container-2 {
