@@ -12,7 +12,7 @@ export const getCities = async countryCode => {
         params: {
             limit: 20,
             type: "CITY",
-            country: countryCode ?? "AR",
+            country: countryCode,
         }
     };
     return await ajax(optionsRequest);
