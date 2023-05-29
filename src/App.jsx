@@ -12,9 +12,10 @@ const App = () => {
    const [cities, setCities] = useState([]);
    const [weather, setWeather] = useState(null);
 
-   useEffect(() => {
+     useEffect(() => {
       (async () => {
-         setCountries(await getCountries());
+         const fetchedCountries = await getCountries();
+         setCountries(fetchedCountries.sort((a, b) => a.name.common.localeCompare(b.name.common)));
       })();
    }, []);
 
